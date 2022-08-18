@@ -1,5 +1,5 @@
 // For problems 1-2 use the following lines of code:
-var arr = [10,20,30,40,50,60]
+var arr = [10, 20, 30, 40, 50, 60];
 
 ////////// PROBLEM 1 //////////
 /*
@@ -7,7 +7,9 @@ var arr = [10,20,30,40,50,60]
 */
 
 //Code Here
+let firstItem = arr[0];
 
+// console.log(firstItem);
 
 ////////// PROBLEM 2 //////////
 /*
@@ -15,11 +17,13 @@ var arr = [10,20,30,40,50,60]
 */
 
 //Code Here
+let lastItemRemoved = arr.pop();
+console.log(arr);
 
 ////////// PROBLEM 3 //////////
 
 // Do not edit the code below.
-var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
+var family = ["Tyler", "Jordan", "Ryan", "Alice", "Ireland"];
 // Do not edit the code above.
 
 /*
@@ -27,74 +31,108 @@ var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
 */
 
 //Code Here
-
-
+for (let i = 0; i < family.length; i++) {
+	console.log(family[i]);
+}
 
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
-var nums = [1,2,3,6,22,98,45,23,22,12];
-let evensArr = []
+var nums = [1, 2, 3, 6, 22, 98, 45, 23, 22, 12];
+let evensArr = [];
 // Do not edit the code above.
 
 /*
   Use a for-loop to iterate through each number in the 'nums' array, if the number is even, append it to the 'evensArr'.
 */
 
-//Code Here
-
-
+//Code Here≠≠
+for (let i = 0; i < nums.length; i++) {
+	if (nums[i] % 2 === 0) {
+		evensArr.push(nums[i]);
+	}
+	console.log(evensArr);
+}
 
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
-var score = 74
+var score = 74;
 // Do not edit the code above.
 
 /*
-  Determine if the letter grade of the given variable 'score'. If the variable is a 90 or above, console log an 'A', between 80 and 89, console log a 'B', between 70 and 79, 'C', between 60 and 69, 'D', and anything below 60 should console log an 'F'.
+  Determine if the letter grade of the given variable 'score'. 
+  If the variable is a 90 or above, console log an 'A', 
+  between 80 and 89, console log a 'B', 
+  between 70 and 79, 'C', 
+  between 60 and 69, 'D', and 
+  anything below 60 should console log an 'F'.
 */
 
 //Code Here
-
+if (score >= 90) {
+	console.log("A");
+} else if (score >= 80 && score <= 89) {
+	console.log("B");
+} else if (score >= 70 && score <= 79) {
+	console.log("C");
+} else if (score >= 60 && score <= 69) {
+	console.log("D");
+} else {
+	console.log("F");
+}
 
 ////////// Intermediate Problems //////////
 
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
-var myFavoriteNumbers = [4,8,12,16,20,24];
+var myFavoriteNumbers = [4, 8, 12, 16, 20, 24, 21, 23];
 // Do not edit the code above.
 
 /*
-  Create a variable named 'someNum' and set it equal to the fifth value of the 'myFavoriteNumbers' array.
+  Create a variable named 'someNum' 
+  and set it equal to the fifth value of the 'myFavoriteNumbers' array.
 */
 
 //Code Here
-
+let someNum = myFavoriteNumbers[(i = 4)];
+console.log(someNum);
 
 ////////// PROBLEM 7 //////////
 
-// Subscripting (accessing values using their index) an array can fail. What happens if you subscript to the 7th element, but there are not 7 elements in the array? Let's write some code to check for that. 
-// Use an if statement to check the length of the 'myFavoriteNumbers' array. If it's less than 7, log 'There are not enough elements in this array' to the console. If the length is more than 7, reassign the value of 'someNum' to the value of the 7th element in the array. (Hint: how can you make sure that your code works for exactly 7 elements? What index do you use to get the 7th element?)
+// Subscripting (accessing values using their index) an array can fail. What happens if you subscript to the 7th element, but there are not 7 elements in the array? Let's write some code to check for that.
+// Use an if statement to check the length of the 'myFavoriteNumbers' array. If it's less than 7, log 'There are not enough elements in this array' to the console.
+//If the length is more than 7, reassign the value of 'someNum' to the value of the 7th element in the array. (Hint: how can you make sure that your code works for exactly 7 elements? What index do you use to get the 7th element?)
 
 //Code Here
-
+if (myFavoriteNumbers.length < 7) {
+	console.log("There are not enough elements in this array");
+} else if (myFavoriteNumbers.length > 7) {
+	someNum = myFavoriteNumbers[(i = 7)];
+	console.log(someNum);
+} else {
+	console.log("This is the 7th value.");
+}
 
 ////////// PROBLEM 8 //////////
 
 // Do not edit the code below.
-var listOfNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
+var listOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 // Do not edit the code above.
 
 // Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
 
 //Code Here
-
+for (let i = 0; i < listOfNumbers.length; i++) {
+	if (listOfNumbers[i] % 3 === 0) {
+		console.log(`${listOfNumbers[i]} is divisible by 3`);
+	}
+}
 
 ////////// PROBLEM 9 //////////
 // Do not edit the code below.
-var letters = ['A', 'B', 'C', 'D', 'E'];
+var letters = ["A", "B", "C", "D", "E"];
 // Do not edit the code above.
 
 /*
@@ -102,7 +140,9 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-
+for (let index = 4; index >= 0; index--) {
+	console.log(letters[index]);
+}
 
 ////////// Advanced Problems //////////
 
@@ -110,7 +150,7 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 // Switch statements can be excellent alternatives to if blocks. Look up switch statements (I recommend W3 Schools) and try to implement one for the following.
 
 // Do not edit the code below.
-let letterGrade = 'B'
+let letterGrade = "B";
 // Do not edit the code above.
 
 /* Use a switch statement on 'letterGrade' and console.log the appropriate response.
@@ -124,8 +164,6 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
-
-
 
 ////////// PROBLEM 11 //////////
 /* The famous FizzBuzz, Devmountain style!
