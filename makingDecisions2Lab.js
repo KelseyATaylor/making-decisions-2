@@ -9,7 +9,7 @@ var arr = [10, 20, 30, 40, 50, 60];
 //Code Here
 let firstItem = arr[0];
 
-// console.log(firstItem);
+console.log(firstItem);
 
 ////////// PROBLEM 2 //////////
 /*
@@ -98,6 +98,7 @@ var myFavoriteNumbers = [4, 8, 12, 16, 20, 24, 21, 23];
 //Code Here
 let someNum = myFavoriteNumbers[(i = 4)];
 console.log(someNum);
+//also let someNum = myFavoriteNumbers[4] works - as per the answers
 
 ////////// PROBLEM 7 //////////
 
@@ -114,7 +115,13 @@ if (myFavoriteNumbers.length < 7) {
 } else {
 	console.log("This is the 7th value.");
 }
+//^This is wrong, but it was a good effort Kelsey :)
 
+if (myFavoriteNumbers.length < 7) {
+	console.log("There are not enough elements in this array");
+} else {
+	someNum = myFavoriteNumbers[6];
+}
 ////////// PROBLEM 8 //////////
 
 // Do not edit the code below.
@@ -140,9 +147,14 @@ var letters = ["A", "B", "C", "D", "E"];
 */
 
 //Code Here
-for (let index = 4; index >= 0; index--) {
-	console.log(letters[index]);
+for (let i = 4; i >= 0; i--) {
+	console.log(letters[i]);
 }
+
+//could also do
+//for (let i = letters.length - 1; i>=0; i--){
+//  console.log(letters[i])
+//}
 
 ////////// Advanced Problems //////////
 
@@ -164,6 +176,25 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+switch (letterGrade) {
+	case "A":
+		console.log("The student is doing excellently.");
+		break;
+	case "B":
+		console.log("The student is doing well.");
+		break;
+	case "C":
+		console.log("The student is doing alright.");
+		break;
+	case "D":
+		console.log("The student is not doing very well.");
+		break;
+	case "F":
+		console.log("The student is failing.");
+		break;
+	default:
+		console.log("Not an eligible grade.");
+}
 
 ////////// PROBLEM 11 //////////
 /* The famous FizzBuzz, Devmountain style!
@@ -190,3 +221,14 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+for (let i = 1; i <= 100; i++) {
+	if (i % 3 === 0 && i % 5 === 0) {
+		console.log("DevMountain");
+	} else if (i % 5 === 0) {
+		console.log("Mountain");
+	} else if (i % 3 === 0) {
+		console.log("Dev");
+	} else {
+		console.log(i);
+	}
+}
